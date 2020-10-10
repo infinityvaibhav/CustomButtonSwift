@@ -10,6 +10,8 @@ import UIKit
 import CustomButtonSwift
 
 class ViewController: UIViewController {
+    
+    var button: CustomButton = CustomButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,9 +23,15 @@ class ViewController: UIViewController {
             yPosition: self.view.center.y,
             height: 100,
             width: 300)
-        let button = CustomButton().applyGlobalButtonTheme(buttonConfig: buttonConfig)
+        button = CustomButton(buttonConfig: buttonConfig)
         view.addSubview(button)
+        
+        button.addTarget(self, action: #selector(self.buttonClick), for: .touchUpInside)
+
     }
 
+    @objc func buttonClick() {
+        print("click")
+    }
 }
 

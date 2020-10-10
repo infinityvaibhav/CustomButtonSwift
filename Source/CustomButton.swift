@@ -7,25 +7,31 @@
 
 import UIKit
 
-public class CustomButton {
+public class CustomButton: UIButton {
     
-    public init() {}
-    
-    public func applyGlobalButtonTheme(buttonConfig: ButtonConfig) -> UIButton {
-        let button = UIButton(frame: CGRect(x: buttonConfig.xPosition, y: buttonConfig.yPosition, width: buttonConfig.width, height: buttonConfig.height))
+    public required init(buttonConfig: ButtonConfig) {
+        super.init(frame: CGRect(x: buttonConfig.xPosition, y: buttonConfig.yPosition, width: buttonConfig.width, height: buttonConfig.height))
         
-        button.backgroundColor = #colorLiteral(red: 0.7578675176, green: 0.09817891725, blue: 0.6028279049, alpha: 1)
-        button.isEnabled = buttonConfig.isEnable
-        button.center.x = buttonConfig.xPosition
-        button.center.y = buttonConfig.yPosition
-        button.layer.cornerRadius = 5.0
-        button.layer.borderColor = UIColor.clear.cgColor
-        button.layer.borderWidth = 2.0
-        button.titleLabel?.textColor = UIColor.white
-        button.setTitle(buttonConfig.title.uppercased(), for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 17)
-        return button
+        self.backgroundColor = #colorLiteral(red: 0.7578675176, green: 0.09817891725, blue: 0.6028279049, alpha: 1)
+        self.isEnabled = buttonConfig.isEnable
+        self.center.x = buttonConfig.xPosition
+        self.center.y = buttonConfig.yPosition
+        self.layer.cornerRadius = 5.0
+        self.layer.borderColor = UIColor.clear.cgColor
+        self.layer.borderWidth = 2.0
+        self.titleLabel?.textColor = UIColor.white
+        self.setTitle(buttonConfig.title.uppercased(), for: .normal)
+        self.titleLabel?.font = UIFont.systemFont(ofSize: 17)
     }
+    
+    public init() {
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }
 
 public struct ButtonConfig {
@@ -50,7 +56,6 @@ public struct ButtonConfig {
         self.yPosition = yPosition
         self.height = height
         self.width = width
-        
     }
 
 }
