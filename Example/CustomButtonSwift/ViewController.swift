@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import CustomButtonSwift
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        let buttonConfig = ButtonConfig(
+            isEnable: true,
+            title: "MyCustomButton",
+            xPosition: self.view.center.x,
+            yPosition: self.view.center.y,
+            height: 100,
+            width: 300)
+        let button = CustomButton().applyGlobalButtonTheme(buttonConfig: buttonConfig)
+        view.addSubview(button)
     }
 
 }

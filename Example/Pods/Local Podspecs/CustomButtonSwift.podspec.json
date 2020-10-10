@@ -1,0 +1,22 @@
+{
+  "name": "CustomButtonSwift",
+  "version": "0.1.0",
+  "summary": "A short description of CustomButtonSwift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/infinityvaibhav/CustomButtonSwift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "infinityvaibhav": "uvaibhavb@gamil.com"
+  },
+  "source": {
+    "git": "https://github.com/infinityvaibhav/CustomButtonSwift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "CustomButtonSwift/Classes/**/*"
+}

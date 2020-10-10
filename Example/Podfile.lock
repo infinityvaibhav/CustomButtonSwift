@@ -1,0 +1,16 @@
+PODS:
+  - CustomButtonSwift (0.1.0)
+
+DEPENDENCIES:
+  - CustomButtonSwift (from `../`)
+
+EXTERNAL SOURCES:
+  CustomButtonSwift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CustomButtonSwift: 6751746dcec5603aa0c2aa3654c952fb705c2f13
+
+PODFILE CHECKSUM: 84d451cdd5b9e272f72cbd151a56f0ab3e6c6bae
+
+COCOAPODS: 1.9.1

@@ -1,0 +1,6 @@
+framework module CustomButtonSwift {
+  umbrella header "CustomButtonSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
